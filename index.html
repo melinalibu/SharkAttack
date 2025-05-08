@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SharkAttack</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Startseite -->
+  <section id="pageStart">
+    <h1>SharkAttack</h1>
+    <button id="btnPlay">Play</button>
+  </section>
+
+  <!-- Länder-Auswahl -->
+  <section id="pageCountry" style="display: none;">
+    <h2>Where do you want to go?</h2>
+    <div id="countryDiv"></div>
+  </section>
+
+  <!-- Aktivität-Auswahl -->
+  <section id="pageActivity" style="display: none;">
+    <h2>What do you want to do?</h2>
+    <div id="activityDiv"></div>
+  </section>
+
+  <!-- Survival-Tipps -->
+  <section id="pageSurvive" style="display: none;">
+    <h2>A shark is pulling up, what's the move?</h2>
+    <div id="survive"></div>
+  </section>
+
+  <!-- Shark Attack Info -->
+  <section id="pageAttack" style="display: none;">
+    <button id="btnExit">X</button>
+    <h2>Shark Attack Result</h2>
+    <div id="attack"></div>
+  </section>
+
+  <!-- Endseite -->
+  <section id="pageEnd" style="display: none;">
+    <h2>Thanks for playing!</h2>
+    <button id="btnRestart">← Back to Start</button>
+  </section>
+
+  <script type="module" src="js/script.js"></script>
+</body>
+</html>
