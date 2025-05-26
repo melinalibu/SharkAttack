@@ -16,37 +16,48 @@
     <div class="overlayBox"></div> <!-- Schwarzes Rechteck -->
     <h1>CAN YOU DUCK FROM THE SHARK?</h1>
     <button id="btnPlay">PLAY</button>
+      <img src="img/sharklittle.png" alt="Sharklittle" class="sharklittle">
   </section>
 
   <!-- Länder-Auswahl -->
   <section id="pageCountry" style="display: none;">
     <h2>WHERE DO YOU WANT TO GO?</h2>
     <div id="countryDiv"></div>
+    <img src="img/palme.png" alt="Palme" class="palme">
+    <img src="img/schirm.png" alt="Schirm" class="Schirm">
   </section>
 
   <!-- Aktivität-Auswahl -->
   <section id="pageActivity" style="display: none;">
     <h2>What do you want to do?</h2>
     <div id="activityDiv"></div>
+    <img src="img/waves.png" alt="waves" class="waves">
   </section>
 
   <!-- Survival-Tipps -->
   <section id="pageSurvive" style="display: none;">
     <h2>A shark is pulling up, what's the move?</h2>
     <div id="survive"></div>
+
+    <img src="img/sharklittle.png" alt="Shark" class="shark">
   </section>
 
   <!-- Shark Attack Info -->
-  <section id="pageAttack" style="display: none;">
+ <section id="pageAttack" style="display: none;">
+  <div class="yellowBox">
     <button id="btnExit">X</button>
-    <h3>Shark Attack Result</h3>
-    <div id="attack"></div>
-  </section>
+    <h3>SHARK <br> ATTACK!!</h3>
+    <div id="attack">Hier kommt das Ergebnis rein</div>
+  </div>
+</section>
+
 
   <!-- Endseite -->
   <section id="pageEnd" style="display: none;">
-    <h2>Thanks for playing!</h2>
-    <button id="btnRestart">← Back to Start</button>
+    <img src="img/sprechblase.png" alt="Logo" id="speakingBubble">
+    <div class="button-wrapper">
+      <button id="btnRestart">BACK TO START</button>
+  </div>
   </section>
 
   <script type="module" src="js/script.js"></script>

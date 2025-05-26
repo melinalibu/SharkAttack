@@ -1,147 +1,325 @@
+/* Reset & Basis */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 * {
     margin: 0;
     padding: 0;
     /* height: 100%; */
     /* box-sizing: border-box; */
-   
 }
+
 :root {
     --beige: #FFF4EA;
     --blue: #0D28F4 ; 
     --red: #FF070C ;
     --lightblue: #8EE5FB; 
     --yellow: #FFBC12 ;
-
 }
-
 body {
-
     background-color: var(--beige);
 }
 
-    h1 {
-        color: var(--blue);
-        font-family: "Jersey 10";
-        font-size: 80px;
-        font-weight: 400;   
-        line-height: normal;
-        
-        background: var(--lightblue);
-        box-shadow: 6px 4px 1px 0px #000;
+/* Überschriften */
+h1 {
+    color: var(--blue);
+    font-family: "Jersey 10";
+    font-size: 80px;
+    font-weight: 400;   
+    line-height: normal;
+    background: var(--lightblue);
+    box-shadow: 6px 4px 1px 0px #000;
+    width: 961px;
+    height: 185px;
+    flex-shrink: 0;
+    padding: 20px 40px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
 
-        width: 961px;
-        height: 185px;
-        flex-shrink: 0;
-        padding: 20px 40px;           /* innen Abstand */
-        margin: 0 auto;               /* zentriert die Box */
-        text-align: center;
+.pageStart {
+    background-image: url("../img/background.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#pageStart .sharklittle {
+  position: absolute;
+  bottom: -50px;
+  right: 5px;
+  width: 440px;  /* Bildgröße anpassen */
+  height: auto;
+}
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
-    }  
-
-    .pageStart {
-        background-image: url("../img/background.jpeg");
-        background-size: cover;           /* skaliert das Bild, um den Container zu füllen */
-         background-position: center;      /* zentriert das Bild */
-        background-repeat: no-repeat;     /* kein mehrfaches Anzeigen */
-         width: 100vw;                     /* volle Bildschirmbreite */
-        height: 100vh;                    /* volle Bildschirmhöhe */
-        display: flex;
-        flex-direction: column;
-         justify-content: center;
-        align-items: center;
-    }
-
-    button{
-        display: flex;
-        width: 640px;
-        height: 90px;
-        padding: 5px 5.375px;
-        margin-top: 2%;
-        justify-content: center;
-        align-items: center;
-        flex-shrink: 0;
-        background: var(--yellow);
-        box-shadow: 6px 4px 1px 0px #000;
-        font-family: "Jersey 10";
-        font-size: 60px;
-        font-weight: 400;   
-        line-height: normal;
-        color: var(--red); 
-        transition: transform 0.3s ease-in-out;
-    }
+button {
+    display: flex;
+    width: 640px;
+    height: 90px;
+    padding: 5px 5.375px;
+    margin-top: 2%;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background: var(--yellow);
+    box-shadow: 6px 4px 1px 0px #000;
+    font-family: "Jersey 10";
+    font-size: 60px;
+    font-weight: 400;   
+    line-height: normal;
+    color: var(--red); 
+    transition: transform 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+}
     
 button:hover {
-        transform: scale(1.1); /* Vergrößert den Button um 10% bei Hover */
-    }
+    transform: scale(1.1);
+}
 
-#pageCountry{
-        background-color: var(--beige);
-        background-size: cover; 
-        width: 100vw;
-        height: 100vh;
-        display: block;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+#pageCountry {
+    position: relative;
+    background-color: var(--beige);
+    background-size: cover; 
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#pageCountry .palme {
+   position: absolute;
+  left: 0;      /* ganz links */
+  bottom: 40px;    /* ganz unten */
+  width: 500px; /* Beispielgröße */
+  height: auto;
+}
+
+#pageCountry .Schirm {
+  position: absolute;
+  right: 0;     /* ganz rechts */
+  bottom: 40px;    /* ganz unten */
+  width: 470.486px;
+  height: 470.486px;
+  transform: rotate(-12.934deg);
+  aspect-ratio: 470.49 / 470.49;
+  flex-shrink: 0;
+}
     
+h2 {
+    color: var(--blue);
+    font-family: "Jersey 10";
+    font-size: 80px;
+    font-weight: 400;   
+    line-height: normal;
+    background: var(--lightblue);
+    box-shadow: 6px 4px 1px 0px #000;
+    width: 961px;
+    height: 150px;
+    flex-shrink: 0;
+    padding: 20px 40px;
+    margin: 40px auto 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    h2 {
-        color: var(--blue);
-        font-family: "Jersey 10";
-        font-size: 80px;
-        font-weight: 400;   
-        line-height: normal;
-        
-        background: var(--lightblue);
-        box-shadow: 6px 4px 1px 0px #000;
-
-        width: 961px;
-        height: 150px;
-        flex-shrink: 0;
-        padding: 20px 40px;           /* innen Abstand */
-        margin: 40px auto 0 auto;              /* zentriert die Box */
-        text-align: center;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
- #countryDiv {
+#countryDiv {
     display: flex;
     flex-direction: column;
     align-items: center;
-    }
-}
-#activityDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-#survive{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
 }
 
-#pageAttack {
-  background-image: url("../img/shark.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+#pageActivity {
+  position: relative; /* Wichtig: damit absolute Kinder sich daran orientieren */
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Optional, falls was raussteht */
+}
+
+#pageActivity .waves {
+  position: absolute;
+  left: 0;
+  bottom: -60px;
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+  z-index: 1; /* Bild ganz hinten */
+}
+#activityDiv {
+  position: relative; /* wichtig, damit z-index wirkt */
+  z-index: 10; /* größer als das Bild */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  gap: 15px; /* Abstand zwischen Buttons */
+}
+
+#pageSurvive {
+    background-image: url("../img/background.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;             /* falls du Flexbox brauchst */
+    flex-direction: column;    /* falls nötig */
+    justify-content: center;   /* falls nötig */
+    align-items: center;       /* falls nötig */
+}
+
+#survive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+#pageSurvive .shark {
+  position: absolute;
+  bottom: 70px;
+  right: 5px;
+  width: 500px;  /* Bildgröße anpassen */
+  height: auto;
+}
+
+
+/* --- Anpassung für pageAttack mit gelber Box --- */
+
+#pageAttack {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  background-image: url("../img/shark.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.yellowBox {
+  background-color: var(--yellow);
+  /* Centering the yellow box */
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 6px 4px 1px 0px #000;
+  width: 600px;
+  max-width: 90vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#pageAttack button#btnExit {
+  position: absolute; /* NEU */
+  top: 10px;          /* Abstand von oben */
+  right: 10px;        /* Abstand von rechts */
+  background-color: transparent;
+  font-size: 40px;
+  width: 60px;
+  height: 60px;
+  box-shadow: 4px 3px 0px 0px #000;
+  border: 2px solid black;
+  cursor: pointer;
+  font-family: "Jersey 10";
+  font-size: 60px;
+  font-weight: 400;
+  line-height: normal;
+  color: black;
+}
+
+
+#pageAttack h3 {
+    font-family: "Jersey 10";
+    font-size: 90px;
+    color: var(--red);
+    margin-bottom: 20px;
+    line-height: 0.8;
+}
+
+#pageAttack #attack {
+    font-size: 24px;
+    color: var(--blue);
+    margin-top: 20px;
+    max-width: 100%;
+    color: #000;
+font-family: "Jersey 10";
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: 47px; /* 146.875% */
+}
+#attack ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#pageEnd {
+    position: relative; /* notwendig für absolute Positionierung von Kindern */
+    background-image: url("../img/shark.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 60px;
+}
+
+#speakingBubble {
+    position: absolute;
+    top: 80px;         /* Abstand vom oberen Rand */
+    right: 70px;        /* Abstand vom rechten Rand */
+    width: 400px;       /* oder: max-width: 30%; */
+}
+
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* notwendig für zentrierten Inhalt */
+    margin-top: 530px;
+}
+
+#btnRestart {
+    width: 361px;
+    height: 70px;
+    background-color: var(--yellow);
+    color: var(--red);
+    font-family: "Jersey 10";
+    font-size: 50px;
+    box-shadow: 6px 4px 1px 0px #000;
+    transition: transform 0.3s ease-in-out;
 }
 
 
