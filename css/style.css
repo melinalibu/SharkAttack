@@ -1,7 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* height: 100%; */
+    /* box-sizing: border-box; */
    
 }
 :root {
@@ -12,44 +13,135 @@
     --yellow: #FFBC12 ;
 
 }
+
 body {
+
     background-color: var(--beige);
+}
+
     h1 {
         color: var(--blue);
         font-family: "Jersey 10";
         font-size: 80px;
         font-weight: 400;   
         line-height: normal;
+        
+        background: var(--lightblue);
+        box-shadow: 6px 4px 1px 0px #000;
 
+        width: 961px;
+        height: 185px;
+        flex-shrink: 0;
+        padding: 20px 40px;           /* innen Abstand */
+        margin: 0 auto;               /* zentriert die Box */
+        text-align: center;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }  
+
+    .pageStart {
+        background-image: url("../img/background.jpeg");
+        background-size: cover;           /* skaliert das Bild, um den Container zu füllen */
+         background-position: center;      /* zentriert das Bild */
+        background-repeat: no-repeat;     /* kein mehrfaches Anzeigen */
+         width: 100vw;                     /* volle Bildschirmbreite */
+        height: 100vh;                    /* volle Bildschirmhöhe */
+        display: flex;
+        flex-direction: column;
+         justify-content: center;
+        align-items: center;
     }
+
+    button{
+        display: flex;
+        width: 640px;
+        height: 90px;
+        padding: 5px 5.375px;
+        margin-top: 2%;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        background: var(--yellow);
+        box-shadow: 6px 4px 1px 0px #000;
+        font-family: "Jersey 10";
+        font-size: 60px;
+        font-weight: 400;   
+        line-height: normal;
+        color: var(--red); 
+        transition: transform 0.3s ease-in-out;
+    }
+    
+button:hover {
+        transform: scale(1.1); /* Vergrößert den Button um 10% bei Hover */
+    }
+
+#pageCountry{
+        background-color: var(--beige);
+        background-size: cover; 
+        width: 100vw;
+        height: 100vh;
+        display: block;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
     h2 {
         color: var(--blue);
         font-family: "Jersey 10";
         font-size: 80px;
         font-weight: 400;   
-        line-height: normal; 
+        line-height: normal;
+        
+        background: var(--lightblue);
+        box-shadow: 6px 4px 1px 0px #000;
+
+        width: 961px;
+        height: 150px;
+        flex-shrink: 0;
+        padding: 20px 40px;           /* innen Abstand */
+        margin: 40px auto 0 auto;              /* zentriert die Box */
+        text-align: center;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    #box_frage {
-        background-color: var(--lightblue);
-        box-shadow: 6px 4px 1px 0px #000;
-        margin: 90px;
+ #countryDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     }
-    #start {
-        background: linear-gradient(90deg, #FFC83E 0%, #FFBC12 100%);
-        box-shadow: 6px 4px 1px 0px #000;
-        width: 333.25px;
-        height: 80px;
-        flex-shrink: 0;
-        margin-left: 200px;
-    }
-    p1 {
-        color: var(--red) ;
-    text-align: center;
-    font-family: "Jersey 15";
-    font-size: 70px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    }
-    }
+}
+#activityDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+#survive{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#pageAttack {
+  background-image: url("../img/shark.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+

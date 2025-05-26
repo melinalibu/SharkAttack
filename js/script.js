@@ -57,11 +57,12 @@ let country = ["USA", "AUSTRALIA", "FIJI", "SOUTH AFRICA", "NEW ZEALAND", "BAHAM
 let randomCountry = [];
 while (randomCountry.length < 3) {
   let randomIndex = Math.floor(Math.random() * country.length);
-  let randomCountry = country[randomIndex];
-  if (!randomCountry.includes(randomCountry)) {
-    randomCountry.push(randomCountry);
+  let chosenCountry = country[randomIndex]; // Umbenannt!
+  if (!randomCountry.includes(chosenCountry)) {
+    randomCountry.push(chosenCountry);
   }
 }
+
 
 randomCountry.forEach(country => {
   const button = document.createElement("button");
@@ -82,7 +83,7 @@ randomCountry.forEach(country => {
     if (data && data.results) {
       let allActivities = data.results
         .map(record => record.activity)
-        .filter(activity => activity && activity.trim().length > 0 && activity.trim().split(/\s+/).length <= 5);
+        .filter(activity => activity && activity.trim().length > 0 && activity.trim().split(/\s+/).length <= 4);
 
       let uniqueActivities = [...new Set(allActivities)];
       let anzahl = Math.min(3, uniqueActivities.length);
@@ -119,13 +120,13 @@ function showSurvivalButtons() {
     "Drop dead quick.",
     "Offer your ex.",
     "Swing first, fam.",
-    "Make Yourself Look Large, G.",
+    "Make yourself look large, G.",
     "Buss It Up!",
     "Bang the shark's nose.",
-    "Swim Calm, Swim Smart.",
+    "Swim calm, swim smart.",
     "Pull Out Uno reverse card.",
     "Chat to the Shark.",
-    "Offer It Your Least Favorite Toe.",
+    "Offer it your least favorite toe.",
     "Flex on the Shark.",
     "Bust a move so cold the shark forgets it's hungry.",
     "Make a lot of noise, fam."
@@ -190,7 +191,7 @@ async function showAttackResult() {
 
 // Lade Daten von API
 async function loadData(country) {
-  const url = `https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/global-shark-attack/records?limit=100&refine=country%3A%22${land}%22`;
+  const url = `https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/global-shark-attack/records?limit=100&refine=country%3A%22${country}%22`;
   try {
     const response = await fetch(url);
     return await response.json();
