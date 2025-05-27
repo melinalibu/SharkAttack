@@ -3,6 +3,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+
 }
 
 * {
@@ -21,6 +22,7 @@ html, body {
 }
 body {
     background-color: var(--beige);
+    overflow: hidden;
 }
 
 /* Überschriften */
@@ -83,7 +85,7 @@ button {
     border: none;
     cursor: pointer;
 }
-    
+
 button:hover {
     transform: scale(1.1);
 }
@@ -102,7 +104,7 @@ button:hover {
 #pageCountry .palme {
    position: absolute;
   left: 0;      /* ganz links */
-  bottom: 40px;    /* ganz unten */
+  bottom: -10px;    /* ganz unten */
   width: 500px; /* Beispielgröße */
   height: auto;
 }
@@ -110,7 +112,7 @@ button:hover {
 #pageCountry .Schirm {
   position: absolute;
   right: 0;     /* ganz rechts */
-  bottom: 40px;    /* ganz unten */
+  bottom: -10px;    /* ganz unten */
   width: 470.486px;
   height: 470.486px;
   transform: rotate(-12.934deg);
@@ -135,6 +137,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 #countryDiv {
@@ -153,6 +156,23 @@ h2 {
   justify-content: center;
   overflow: hidden; /* Optional, falls was raussteht */
 }
+#pageActivity .surfbrett {
+  position: absolute;
+  right: 0;
+  bottom: -120px; 
+  width: 540px;
+  height: 540px;
+  z-index: 1; 
+}
+
+#pageActivity .ball {
+  position: absolute;
+  left: 0;
+  bottom: -120px; 
+  width: 350px;
+  height: 350px;
+  z-index: 1; 
+}
 
 #pageActivity .waves {
   position: absolute;
@@ -161,7 +181,7 @@ h2 {
   width: 100vw;
   height: auto;
   object-fit: cover;
-  z-index: 1; /* Bild ganz hinten */
+  z-index: -1; /* Bild ganz hinten */
 }
 #activityDiv {
   position: relative; /* wichtig, damit z-index wirkt */
@@ -170,8 +190,9 @@ h2 {
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
-  gap: 15px; /* Abstand zwischen Buttons */
+
 }
+
 
 #pageSurvive {
     background-image: url("../img/background.jpeg");
@@ -184,6 +205,7 @@ h2 {
     flex-direction: column;    /* falls nötig */
     justify-content: center;   /* falls nötig */
     align-items: center;       /* falls nötig */
+    padding-top: 20px;
 }
 
 #survive {
@@ -224,7 +246,6 @@ h2 {
     left: 50%;
     transform: translate(-50%, -50%);
   padding: 40px;
-  border-radius: 20px;
   box-shadow: 6px 4px 1px 0px #000;
   width: 600px;
   max-width: 90vw;
@@ -265,18 +286,17 @@ h2 {
     font-size: 24px;
     color: var(--blue);
     margin-top: 20px;
-    max-width: 100%;
     color: #000;
 font-family: "Jersey 10";
-font-size: 32px;
+font-size: 36px;
 font-style: normal;
-font-weight: 400;
-line-height: 47px; /* 146.875% */
+line-height: 1.2;
+
 }
 #attack ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  text-align: left;
+  padding-left: 30px; /* Abstand links */
 }
 
 #pageEnd {
@@ -299,7 +319,7 @@ line-height: 47px; /* 146.875% */
 #speakingBubble {
     position: absolute;
     top: 80px;         /* Abstand vom oberen Rand */
-    right: 70px;        /* Abstand vom rechten Rand */
+    right: 60px;        /* Abstand vom rechten Rand */
     width: 400px;       /* oder: max-width: 30%; */
 }
 
@@ -320,6 +340,141 @@ line-height: 47px; /* 146.875% */
     font-size: 50px;
     box-shadow: 6px 4px 1px 0px #000;
     transition: transform 0.3s ease-in-out;
+}
+/* 🎨 Rand mit Abstand (ohne Padding) */
+body::before {
+  content: "";
+  position: fixed;
+  top: 20px;       /* Abstand von oben */
+  left: 20px;      /* Abstand von links */
+  right: 20px;     /* Abstand von rechts */
+  bottom: 20px;    /* Abstand von unten */
+  border: 3px solid #1C1B1B; /* Randfarbe und -dicke */
+  pointer-events: none; /* Klicks nicht blockieren */
+  z-index: 9999;   /* Über alles drüber */
+}
+
+.highlight {
+  color: red;
+  padding-left: 12px; /* Abstand nach dem Doppelpunkt */
+}
+
+/* 📱 Responsive für max. 768px */
+@media (max-width: 768px){
+    
+  h1, h2 {
+    font-size: 40px;
+    width: 80%;
+    height: auto;
+    padding: 15px;
+  }
+  
+  button {
+    width: 60%;
+    height: 60px;
+    font-size: 40px;
+    line-height: 0.6 !important; /* kleinerer Zeilenabstand */
+    white-space: normal !important;
+  }
+  #pageCountry {
+  padding-top: 150px;
+  }
+
+  #pageStart .sharklittle {
+    width: 300px; /* Bildgröße anpassen */
+    bottom: -100px; /* Position anpassen */
+    right: 4; /* ganz rechts */
+    bottom: 80px; /* Position anpassen */
+  }
+  #pageCountry .palme {
+    width: 320px; /* Bildgröße anpassen */
+    bottom: 120px; /* Position anpassen */
+    left: -30px; /* ganz links */
+  }
+  #pageCountry .Schirm {
+    width: 300px; /* Bildgröße anpassen */
+    height: 350px;
+    bottom: 100px; /* Position anpassen */
+    right: -30px;
+  }
+
+  #pageActivity {
+    padding-top: 150px;
+    background-image: url("../img/waves.png"); /* dein Wellenbild */
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }
+
+  #pageActivity .surfbrett {
+  width: 300px;
+  height: 400px;  
+  bottom: 0px;
+  right: -40px; /* ganz rechts */
+  }
+  
+  #pageActivity .ball {
+  width: 200px;
+  height: 300px;  
+  bottom: 0px;
+  left: 20px;
+  /* ganz links */
+  }
+
+  #pageSurvive {
+  padding-top: 150px;
+  }
+
+  #pageSurvive .shark {
+    width: 300px; /* Bildgröße anpassen */
+    bottom: 20px; /* Position anpassen */
+    right: 10px; /* ganz rechts */
+  }
+
+  #pageAttack {
+  padding-top: 80px;
+  background-image: url("../img/shark_moblie.png");
+}
+
+  #pageAttack h3 {
+    font-size: 60px;
+  }
+
+  #pageAttack #attack {
+    font-size: 24px;
+  }
+  .yellowBox {
+    top: 30%;
+    width: 70%;
+    padding: 20px;
+    
+  }
+
+#pageEnd {
+  padding-top: 80px;
+  background-image: url("../img/shark_moblie.png");
+}
+
+  #speakingBubble {
+    width: 300px;
+    top: 20px;
+    right: -10px;
+  }
+
+  #btnRestart {
+    width: 250px;
+    height: 60px;
+    font-size: 30px;
+    
+  }
+
+#pageEnd .button-wrapper {
+  position: absolute;
+  bottom: 180px; /* Abstand vom unteren Rand */
+  left: 50%; 
+  transform: translateX(-50%);
+}
+
 }
 
 

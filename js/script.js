@@ -33,7 +33,13 @@ function showPage(page) {
     pageEnd
   ];
   allPages.forEach(p => p.style.display = "none");
+  if (page === pageStart){
+    page.style.display = "flex";
+  }
+  else {
   page.style.display = "block";
+  }
+  
 }
 
 // Startbutton
@@ -51,6 +57,11 @@ btnRestart.addEventListener("click", () => {
   showPage(pageStart);
 });
 
+document.getElementById("btnRestart").addEventListener("click", () => {
+  location.reload(); // Seite neu laden
+});
+
+
 // Country-Auswahl
 let country = ["USA", "AUSTRALIA", "FIJI", "SOUTH AFRICA", "NEW ZEALAND", "BAHAMAS", "BRAZIL", "CANADA", "COSTA RICA", "CROATIA", "EGYPT", "FRANCE", "INDONESIA"];
 
@@ -62,7 +73,6 @@ while (randomCountry.length < 3) {
     randomCountry.push(chosenCountry);
   }
 }
-
 
 randomCountry.forEach(country => {
   const button = document.createElement("button");
@@ -101,6 +111,8 @@ randomCountry.forEach(country => {
         btn.innerText = activity;
         activityDiv.appendChild(btn);
 
+    
+
 //activity-Buttons
         btn.addEventListener("click", () => {
           selectedActivity = activity;
@@ -126,9 +138,10 @@ function showSurvivalButtons() {
     "Swim calm, swim smart.",
     "Pull Out Uno reverse card.",
     "Chat to the Shark.",
-    "Offer it your least favorite toe.",
+    "Offer it your toe.",
     "Flex on the Shark.",
-    "Bust a move so cold the shark forgets it's hungry.",
+    "Throw a rock.",
+    "Splash water in its face.",
     "Make a lot of noise, fam."
   ];
 
@@ -170,17 +183,17 @@ async function showAttackResult() {
       const attack = filtered[Math.floor(Math.random() * filtered.length)];
       const ul = document.createElement("ul");
 
-      const dateLi = document.createElement("li");
-      dateLi.textContent = `Date: ${attack.date || "Unknown"}`;
-      const injuryLi = document.createElement("li");
-      injuryLi.textContent = `Injury: ${attack.injury || "Unknown"}`;
-      const speciesLi = document.createElement("li");
-      speciesLi.textContent = `Species: ${attack.species || "Unknown"}`;
-      const typeLi = document.createElement("li");
-      typeLi.textContent = `Type: ${attack.type || "Unknown"}`;
+      function createStyledLi(lable, value) {
+  const li = document.createElement("li");
+  li.innerHTML = `${lable}: <span class=highlight>${value || "Unknown"}</span>`;
+    return li; }
+              
+ul.appendChild(createStyledLi(" SHARK CAUGHT YOU SLIPPING ON", attack.date));
+ul.appendChild(createStyledLi("Injury", attack.injury));
+ul.appendChild(createStyledLi("Species", attack.species));
+ul.appendChild(createStyledLi("Type", attack.type));
 
-      ul.append(dateLi, injuryLi, speciesLi, typeLi);
-      attackDiv.appendChild(ul);
+attackDiv.appendChild(ul);
     } else {
       attackDiv.textContent = "No matching shark attack found.";
     }
@@ -200,3 +213,4 @@ async function loadData(country) {
     return false;
   }
 }
+
