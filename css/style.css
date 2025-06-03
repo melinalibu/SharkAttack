@@ -1,6 +1,7 @@
 /* Reset & Basis */
 html, body {
     height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
 
@@ -96,6 +97,7 @@ button:hover {
     background-size: cover; 
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
     display: block;
     flex-direction: column;
     justify-content: center;
@@ -359,12 +361,13 @@ body::before {
   padding-left: 12px; /* Abstand nach dem Doppelpunkt */
 }
 
-/* 📱 Responsive für max. 768px */
-@media (max-width: 768px){
+/* 📱 Responsive für max. 414 */
+@media (max-width: 414px){
+  
     
   h1, h2 {
     font-size: 40px;
-    width: 80%;
+    width: 70%;
     height: auto;
     padding: 15px;
   }
@@ -375,27 +378,36 @@ body::before {
     font-size: 40px;
     line-height: 0.6 !important; /* kleinerer Zeilenabstand */
     white-space: normal !important;
+    margin-top: 5%;
   }
-  #pageCountry {
-  padding-top: 150px;
-  }
-
   #pageStart .sharklittle {
     width: 300px; /* Bildgröße anpassen */
-    bottom: -100px; /* Position anpassen */
     right: 4; /* ganz rechts */
-    bottom: 80px; /* Position anpassen */
+    bottom: 85px; 
+    pointer-events: none;
   }
+  
+  #pageCountry {
+  padding-top: 150px;
+
+  }
+
   #pageCountry .palme {
     width: 320px; /* Bildgröße anpassen */
-    bottom: 120px; /* Position anpassen */
-    left: -30px; /* ganz links */
+    bottom: 190px;
+    left: -70px; /* ganz links */
+    pointer-events: none;
+    
+    ;
   }
+  
   #pageCountry .Schirm {
     width: 300px; /* Bildgröße anpassen */
     height: 350px;
-    bottom: 100px; /* Position anpassen */
-    right: -30px;
+    bottom: 170px; /* Position anpassen */
+    right: -70px;
+    pointer-events: none;
+    
   }
 
   #pageActivity {
@@ -409,16 +421,17 @@ body::before {
   #pageActivity .surfbrett {
   width: 300px;
   height: 400px;  
-  bottom: 0px;
-  right: -40px; /* ganz rechts */
+  bottom: 80px;
+  right: -10px;
+  pointer-events: none;
   }
   
   #pageActivity .ball {
-  width: 200px;
-  height: 300px;  
-  bottom: 0px;
-  left: 20px;
-  /* ganz links */
+  width: 180px;
+  height: 200px;  
+  bottom: 220px;
+  left: -10px;
+  pointer-events: none;
   }
 
   #pageSurvive {
@@ -427,8 +440,9 @@ body::before {
 
   #pageSurvive .shark {
     width: 300px; /* Bildgröße anpassen */
-    bottom: 20px; /* Position anpassen */
+    bottom: 100px; /* Position anpassen */
     right: 10px; /* ganz rechts */
+    pointer-events: none;
   }
 
   #pageAttack {
@@ -444,10 +458,9 @@ body::before {
     font-size: 24px;
   }
   .yellowBox {
-    top: 30%;
+    top: 22%;
     width: 70%;
     padding: 20px;
-    
   }
 
 #pageEnd {
@@ -457,24 +470,23 @@ body::before {
 
   #speakingBubble {
     width: 300px;
-    top: 20px;
-    right: -10px;
+    top: 60px;
+    right: -30px;
   }
 
   #btnRestart {
     width: 250px;
     height: 60px;
-    font-size: 30px;
-    
+    font-size: 30px;    
   }
 
 #pageEnd .button-wrapper {
   position: absolute;
-  bottom: 180px; /* Abstand vom unteren Rand */
+  bottom: 240px; /* Abstand vom unteren Rand */
   left: 50%; 
   transform: translateX(-50%);
 }
-
 }
+
 
 
