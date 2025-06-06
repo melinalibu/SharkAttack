@@ -20,9 +20,9 @@ FIGMA: Gestaltung des Layouts und User Experience
 Code-Editor: Visual Studio Code mit Live Server Extension
 
 Beispiele für Prompts via ChatGPT: 
-"„Wie kann ich in JavaScript eine Entscheidungsfunktion schreiben, die basierend auf der Nutzerwahl den nächsten Spielabschnitt lädt?"
-"Wie kann ich aus den geladenen Daten aus der IPA automatisch Buttons erstellen lassen"
-"„Wie kann ich mit CSS verhindern, dass Bilder in meinem Spiel klickbar oder selektierbar sind?“
-"„Wie kann ich verhindern, dass die Seite bei Überlauf scrollt?“
+- Wie kann ich in JavaScript eine Entscheidungsfunktion schreiben, die basierend auf der Nutzerwahl den nächsten Spielabschnitt lädt?
+- Wie kann ich aus den geladenen Daten aus der API automatisch Buttons erstellen lassen?
+- Wie kann ich mit CSS verhindern, dass Bilder in meinem Spiel klickbar oder selektierbar sind?
+- Wie kann ich verhindern, dass die Seite bei Überlauf scrollt?
 
 Technologien: HTML5, CSS3 (Verwendung von Flexbox, Media Queries, Pseudo-Elementen), Vanilla Java Script (Verwendung von DOM-Manipulation, Fetch API async/await und Event-Listeners)
